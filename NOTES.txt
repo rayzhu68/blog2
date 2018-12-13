@@ -1,0 +1,25 @@
+*******************************************************
+§1. To set up the workspace for Django v1.11 at Cloud9
+*******************************************************
+1. create C9 workspace django-authentication and set up python3. Note: -O is o not zero!!!
+wget -q https://git.io/v77xs -O /tmp/setup-workspace.sh && source /tmp/setup-workspace.sh
+mkvirtualenv foo
+
+2. 
+sudo pip3 install django==1.11
+pip freeze > requirements.txt
+
+3. create a project folder at root
+django-admin startproject blog .
+
+4. to make manage.py executable and run it with migration
+chmod +x manage.py
+./manage.py migrate
+./mange.py runserver $IP:$PORT
+
+5. copy the address 'blog2-rayzhu247.c9users.io' to allowed host at settings.py
+and refresh the page to show the welcome messages! It works!
+
+
+
+
