@@ -20,6 +20,30 @@ chmod +x manage.py
 5. copy the address 'blog2-rayzhu247.c9users.io' to allowed host at settings.py
 and refresh the page to show the welcome messages! It works!
 
+6. create git and push it to github
+git init
+echo -e "*.sqlite3\n*.pyc\n*.~c9\n__pycache__/" > .gitignore
+git status
+git add .
+git commit -m "Created simple Django project"
+
+7. setup Travis CI: go to the account and find the repo and its markdown link
+and copy it to the end of readme.md file. 
+
+8. create .travis.yml file to track and test our builing process
+.travis.yml
+language: python
+python:
+    - "3.4"
+instal: "pip3 install -r requirements.txt"
+script:
+- SECRET_KEY="whatever" ./manage.py test
+
+9. 
+git status
+git add .
+git commit -m "Repo has synced with Travis"
+git push
 
 
 
